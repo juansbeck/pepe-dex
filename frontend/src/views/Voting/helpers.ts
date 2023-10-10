@@ -38,7 +38,7 @@ export interface Message {
 export const generateMetaData = () => {
   return {
     plugins: {},
-    network: 882687,
+    network: 7778,
     strategies: [{ name: 'cake', params: { symbol: 'CAKE', address: getCakeAddress(), decimals: 18 } }],
   }
 }

@@ -1,13 +1,13 @@
 pragma solidity =0.5.16;
 
-import './interfaces/ILeapERC20.sol';
+import './interfaces/IXEP20.sol';
 import './libraries/SafeMath.sol';
 
-contract LeapERC20 is ILeapERC20 {
+contract XEP20 is IXEP20 {
     using SafeMath for uint;
 
-    string public constant name = 'Leap LPs';
-    string public constant symbol = 'Leap-LP';
+    string public constant name = 'Usdx LPs';
+    string public constant symbol = 'Usdx-LP';
     uint8 public constant decimals = 18;
     uint  public totalSupply;
     mapping(address => uint) public balanceOf;
@@ -79,7 +79,7 @@ contract LeapERC20 is ILeapERC20 {
     }
 
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
-        require(deadline >= block.timestamp, 'Leap: EXPIRED');
+        require(deadline >= block.timestamp, 'Usdx: EXPIRED');
         bytes32 digest = keccak256(
             abi.encodePacked(
                 '\x19\x01',
@@ -88,7 +88,7 @@ contract LeapERC20 is ILeapERC20 {
             )
         );
         address recoveredAddress = ecrecover(digest, v, r, s);
-        require(recoveredAddress != address(0) && recoveredAddress == owner, 'Leap: INVALID_SIGNATURE');
+        require(recoveredAddress != address(0) && recoveredAddress == owner, 'Usdx: INVALID_SIGNATURE');
         _approve(owner, spender, value);
     }
 }

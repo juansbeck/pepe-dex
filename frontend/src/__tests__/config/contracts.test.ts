@@ -4,7 +4,7 @@ import contracts from 'config/constants/contracts'
 
 describe('Config contracts', () => {
   it.each(map(contracts, (contract, key) => [key, contract]))('Contract %s has a unique address', (key, contract) => {
-    const duplicates = filter(contracts, (c) => contract[882687] === c[882687])
+    const duplicates = filter(contracts, (c) => contract[7778] === c[7778])
     expect(duplicates).toHaveLength(1)
   })
 })

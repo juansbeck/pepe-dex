@@ -5,15 +5,15 @@ export const IPFS_GATEWAY = 'https://ipfs.io/ipfs'
 export const nftSources: NftSource = {
   [NftType.PANCAKE]: {
     address: {
-      882687: '0xDf7952B35f24aCF7fC0487D01c8d5690a60DBa07',
-      882688: '0x60935F36e4631F73f0f407e68642144e07aC7f5E',
+      7778: '0xDf7952B35f24aCF7fC0487D01c8d5690a60DBa07',
+      7777: '0x60935F36e4631F73f0f407e68642144e07aC7f5E',
     },
     identifierKey: 'image',
   },
   [NftType.MIXIE]: {
     address: {
-      882687: '0xa251b5EAa9E67F2Bc8b33F33e20E91552Bf85566',
-      882688: '',
+      7778: '0xa251b5EAa9E67F2Bc8b33F33e20E91552Bf85566',
+      7777: '',
     },
     identifierKey: 'image',
   },

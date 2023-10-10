@@ -1,8 +1,8 @@
 import { ChainId, Token } from '@pancakeswap/sdk'
 
 export const CAKE: { [chainId: number]: Token } = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xBB8f735e1ec578EF7964A13827F126b78A8439e8', 18, 'SYNC', 'PepeSync'),
-  [ChainId.TESTNET]: new Token(ChainId.TESTNET, '0xBB8f735e1ec578EF7964A13827F126b78A8439e8', 18, 'SYNC', 'PepeSync'),
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xD89a1E2b55A1e63A6ef99A2AFf3F3B3A4882D620', 18, 'SYNC', 'PepeSync'),
+  [ChainId.TESTNET]: new Token(ChainId.TESTNET, '0xD89a1E2b55A1e63A6ef99A2AFf3F3B3A4882D620', 18, 'SYNC', 'PepeSync'),
 }
 export const BUSD: { [chainId: number]: Token } = {
   [ChainId.MAINNET]: new Token(
@@ -21,7 +21,7 @@ export const BUSD: { [chainId: number]: Token } = {
   ),
 }
 
-export const WBNB = new Token(ChainId.MAINNET, '0x79369226fe743EC278C7169B83D2FEd7A0500642', 18, 'WBNB', 'Wrapped BNB')
+export const WBNB = new Token(ChainId.MAINNET, '0x937df41e7AE544c028494Bc2dCB69F2Ebf9eFb50', 18, 'WBNB', 'Wrapped BNB')
 
 const tokens = {
   bnb: {
@@ -31,8 +31,8 @@ const tokens = {
   wbnb: {
     symbol: 'WETH',
     address: {
-      882687: '0x79369226fe743EC278C7169B83D2FEd7A0500642',
-      882688: '0x79369226fe743EC278C7169B83D2FEd7A0500642',
+      7777: '0x937df41e7AE544c028494Bc2dCB69F2Ebf9eFb50',
+      7778: '0x937df41e7AE544c028494Bc2dCB69F2Ebf9eFb50',
     },
     decimals: 18,
     projectLink: '',
@@ -40,8 +40,8 @@ const tokens = {
   cake: {
     symbol: 'SYNC',
     address: {
-      882687: '0xBB8f735e1ec578EF7964A13827F126b78A8439e8',
-      882688: '0xBB8f735e1ec578EF7964A13827F126b78A8439e8',
+      7777: '0xD89a1E2b55A1e63A6ef99A2AFf3F3B3A4882D620',
+      7778: '0xD89a1E2b55A1e63A6ef99A2AFf3F3B3A4882D620',
     },
     decimals: 18,
     projectLink: 'https://leap.io/',

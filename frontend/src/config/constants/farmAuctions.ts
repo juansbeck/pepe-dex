@@ -4,7 +4,7 @@ import { FarmAuctionBidderConfig, Token } from './types'
 
 const getLpAddress = (token: string, quoteToken: Token) => {
   const tokenAsToken = new SDKToken(ChainId.MAINNET, token, 18)
-  const quoteTokenAsToken = new SDKToken(ChainId.MAINNET, quoteToken.address[882687], 18)
+  const quoteTokenAsToken = new SDKToken(ChainId.MAINNET, quoteToken.address[7778], 18)
   return Pair.getAddress(tokenAsToken, quoteTokenAsToken)
 }
 

@@ -1,10 +1,10 @@
 pragma solidity =0.5.16;
 
-import './interfaces/ILeapFactory.sol';
-import './LeapPair.sol';
+import './interfaces/IUsdxFactory.sol';
+import './UsdxPair.sol';
 
-contract LeapFactory is ILeapFactory {
-    bytes32 public constant INIT_CODE_PAIR_HASH = keccak256(abi.encodePacked(type(LeapPair).creationCode));
+contract UsdxFactory is IUsdxFactory {
+    bytes32 public constant INIT_CODE_PAIR_HASH = keccak256(abi.encodePacked(type(UsdxPair).creationCode));
 
     address public feeTo;
     address public feeToSetter;
@@ -23,16 +23,16 @@ contract LeapFactory is ILeapFactory {
     }
 
     function createPair(address tokenA, address tokenB) external returns (address pair) {
-        require(tokenA != tokenB, 'Leap: IDENTICAL_ADDRESSES');
+        require(tokenA != tokenB, 'Usdx: IDENTICAL_ADDRESSES');
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
-        require(token0 != address(0), 'Leap: ZERO_ADDRESS');
-        require(getPair[token0][token1] == address(0), 'Leap: PAIR_EXISTS'); // single check is sufficient
-        bytes memory bytecode = type(LeapPair).creationCode;
+        require(token0 != address(0), 'Usdx: ZERO_ADDRESS');
+        require(getPair[token0][token1] == address(0), 'Usdx: PAIR_EXISTS'); // single check is sufficient
+        bytes memory bytecode = type(UsdxPair).creationCode;
         bytes32 salt = keccak256(abi.encodePacked(token0, token1));
         assembly {
             pair := create2(0, add(bytecode, 32), mload(bytecode), salt)
         }
-        ILeapPair(pair).initialize(token0, token1);
+        IUsdxPair(pair).initialize(token0, token1);
         getPair[token0][token1] = pair;
         getPair[token1][token0] = pair; // populate mapping in the reverse direction
         allPairs.push(pair);
@@ -40,12 +40,12 @@ contract LeapFactory is ILeapFactory {
     }
 
     function setFeeTo(address _feeTo) external {
-        require(msg.sender == feeToSetter, 'Leap: FORBIDDEN');
+        require(msg.sender == feeToSetter, 'Usdx: FORBIDDEN');
         feeTo = _feeTo;
     }
 
     function setFeeToSetter(address _feeToSetter) external {
-        require(msg.sender == feeToSetter, 'Leap: FORBIDDEN');
+        require(msg.sender == feeToSetter, 'Usdx: FORBIDDEN');
         feeToSetter = _feeToSetter;
     }
 }

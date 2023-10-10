@@ -13,16 +13,16 @@
     {
       "name": "WETH Token",
       "symbol": "WETH",
-      "address": "0x79369226fe743EC278C7169B83D2FEd7A0500642",
-      "chainId": 882688,
+      "address": "0x937df41e7AE544c028494Bc2dCB69F2Ebf9eFb50",
+      "chainId": 7777,
       "decimals": 18,
       "logoURI": "/images/tokens/0x79369226fe743EC278C7169B83D2FEd7A0500642.png"
     },
     {
-      "name": "PepeSync",
+      "name": "XepSync",
       "symbol": "SYNC",
-      "address": "0xBB8f735e1ec578EF7964A13827F126b78A8439e8",
-      "chainId": 882688,
+      "address": "0xD89a1E2b55A1e63A6ef99A2AFf3F3B3A4882D620",
+      "chainId": 7777,
       "decimals": 18,
       "logoURI": "/images/tokens/0xBB8f735e1ec578EF7964A13827F126b78A8439e8.png"
     }
